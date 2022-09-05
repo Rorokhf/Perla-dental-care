@@ -639,9 +639,12 @@ header nav li a:hover {
 @media (max-width:797px){
     .reservation .cards{
         grid-template-columns: repeat(auto-fill, minmax(212px, 1fr));
+<<<<<<< HEAD
         position: relative;
         left: 0;
         top: 19px;
+=======
+>>>>>>> 62e0a5d0653f5db46ef601ede4f2ef76a3a9b693
     }
     
 }
