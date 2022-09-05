@@ -634,7 +634,7 @@ header nav li a:hover {
 }
 @media (max-width:797px){
     .reservation .cards{
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(212px, 1fr));
     }
 }
 .reservation .our-res,
