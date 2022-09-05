@@ -624,18 +624,26 @@ header nav li a:hover {
 .reservation {
     z-index: 2;
     bottom: -355%;
-    /* position: absolute; */
+    position: relative;
 }
 
 .reservation .cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(400px, 15px));
     justify-content: space-evenly;
+    position: absolute;
+    top: -49px;
+    left: 200px;
+    grid-gap: 20px
 }
 @media (max-width:797px){
     .reservation .cards{
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(212px, 1fr));
+        position: relative;
+        left: 0;
+        top: 19px;
     }
+    
 }
 .reservation .our-res,
 .location {
