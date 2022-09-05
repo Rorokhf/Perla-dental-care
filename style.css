@@ -111,7 +111,7 @@ header nav .toggle-menu:hover+ul {
     top: 64%;
     width: 100%;
     left: 0;
-    background-color: rgb(3 54 3 / 19%);
+    background-color: rgb(3 54 3 / 56%);
     border-radius: 13px;
     align-items: center;
 }
@@ -627,12 +627,16 @@ header nav li a:hover {
     /* position: absolute; */
 }
 
-.reservation .container {
+.reservation .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    column-gap: 20px;
+    grid-template-columns: repeat(2, minmax(400px, 15px));
+    justify-content: space-evenly;
 }
-
+@media (max-width:797px){
+    .reservation .cards{
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
 .reservation .our-res,
 .location {
     display: flex;
