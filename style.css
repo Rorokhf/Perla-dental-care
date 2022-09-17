@@ -620,98 +620,132 @@ header nav li a:hover {
     border: 1px solid var(--second-color);
 }
 
-/*  */
-.reservation {
-    z-index: 2;
-    bottom: -355%;
-    position: relative;
+/* reservation */
+.reservation{
+   min-height: 100vh;
+   display: flex;
+   flex-wrap: wrap;
+ 
 }
+.reservation .image{
+position: relative;
+background-image: url(./discount/discount-background1.jpg);
+background-size: cover;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-basis: 50%;
+z-index: 1;
 
-.reservation .cards {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(400px, 15px));
-    justify-content: space-evenly;
+
+}
+@media(max-width:991px){
+    .reservation .image{
+        flex-basis: 100%;
+    }  
+}
+.reservation .image::before{
+    content: "";
     position: absolute;
-    top: -49px;
-    left: 200px;
-    grid-gap: 20px
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(98 210 162 / 96%);;
+    z-index: -1;
 }
-@media (max-width:797px){
-    .reservation .cards{
-        grid-template-columns: repeat(auto-fill, minmax(212px, 1fr));
-<<<<<<< HEAD
-        position: relative;
-        left: 0;
-        top: 19px;
-=======
->>>>>>> 62e0a5d0653f5db46ef601ede4f2ef76a3a9b693
-    }
-    
+.reservation .content{
+    text-align: center;
+    padding: 0px 20px;
 }
-.reservation .our-res,
-.location {
+.reservation .content h2{
+    font-size: 40px;
+    letter-spacing: -1px;
+    padding-bottom: 10px;
+}
+.reservation .content p{
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 1.6;
+   
+}
+.reservation .content img{
+    width: 300px;
+    max-width: 100%;
+}
+.reservation .form{
     display: flex;
-    background-color: var(--logo-color);
-    justify-content: space-evenly;
-    height: 120px;
+    justify-content: center;
     align-items: center;
+    flex-basis: 50%;
+  
+}
+@media(max-width:991px){
+    .reservation .form{
+        flex-basis: 100%;
+        padding-bottom: 10px;
+    }  
+}
+.reservation  .form .input:focus{
+    outline: none;
+}
+.reservation  .form .input {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: #F9F9F9;
+    caret-color: var(--main-color);
+}
+.reservation .form textarea.input {
+    resize: none;
+    height: 200px;
+}
+.reservation .form [type="submit"]{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--main-color);
     color: white;
-    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
 }
-
-
-
-
-.reservation .location {
-    background-color: var(--logo-color2);
+.reservation .form [type="submit"]:hover{
+    background-color: var(--second-color);
 }
-
-.reservation .our-res .icon i {
-    font-size: 65px;
-}
-
-.reservation .our-res .details h3 {
-    font-size: 29px;
-    padding-bottom: 10px;
-}
-
-.reservation .our-res .details p {
-    line-height: 1.8;
-    padding-bottom: 10px;
-}
-
-.reservation .our-res .details a {
-    text-decoration: none;
-    color: white;
-}
-
 /* footer */
 .footer_section {
     background-color: var(--second-color);
-    height: fit-content;
-}
-
-.footer_section .container {
-    padding-top: 93px;
-    padding-left: 66px;
+    padding: 70px 0 0;
 }
 
 .footer_section .row {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 40px;
+}
+@media(max-width:991px){
+    .footer_section .row{
+        justify-content: center;
+        text-align: center;
+    }
+}
+.footer_section .row .footer_col h3{
     color: white;
-
-
+    font-size: 50px;
+    margin: 0 0 20px;
 }
 
-.footer_section .row .footer_col {
-    flex-basis: 35%;
-}
-
-.footer_section h4 {
-    font-size: 21px;
-    padding-bottom: 30px;
-}
 
 .footer_section a {
     display: block;
@@ -724,17 +758,25 @@ header nav li a:hover {
 .footer_section .footer_social {
     display: flex;
     justify-content: space-around;
-    max-width: 50%;
+   align-items: center;
 }
-
-.footer_section p {
+.footer_col  h4{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.footer_col  p {
     line-height: 1.5;
     font-size: 15px;
-    max-width: 73%;
-    padding-bottom: 20px;
+  color: #F9F9F9;
 }
-
-
+.footer_col .footer_links a:not(:last-child){
+    border-bottom: 1px solid var(--main-color);
+}
+.footer_col .footer_links a:hover{
+    color: var(--logo-color);
+}
 
 
 .footer_section form button {
